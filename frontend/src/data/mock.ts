@@ -52,6 +52,33 @@ export const tradeLeads = [
     potentialReturn: '+8.5%',
     timeframe: '2-4 weeks',
     status: 'pending' as const,
+    reasoning: {
+      dataSources: [
+        { name: 'SEC 10-Q Filing', type: 'fundamental' as const, detail: 'Q4 2025 quarterly report — data center revenue $18.4B (+154% YoY)' },
+        { name: 'Bloomberg Terminal', type: 'market' as const, detail: 'Institutional buying volume up 32% over 10-day average' },
+        { name: 'Reuters News Feed', type: 'news' as const, detail: '14 positive analyst revisions in past 7 days' },
+        { name: 'Technical Analysis', type: 'technical' as const, detail: 'RSI at 62, MACD bullish crossover, above 50-day SMA' },
+      ],
+      signals: [
+        { label: 'Revenue Growth', impact: 'high' as const, description: 'Data center segment growing 154% YoY, beating consensus by 12%' },
+        { label: 'Institutional Flow', impact: 'high' as const, description: 'Net institutional inflows of $2.1B in last 5 trading days' },
+        { label: 'AI Capex Cycle', impact: 'medium' as const, description: 'Hyperscaler capex guidance up 40% — direct demand driver' },
+        { label: 'Valuation Risk', impact: 'low' as const, description: 'Forward P/E of 35x is elevated but justified by growth trajectory' },
+      ],
+      steps: [
+        'Screened 4,200+ equities for momentum + fundamental strength',
+        'Identified NVDA via sector rotation model (AI/semiconductor overweight)',
+        'Cross-referenced earnings surprise history (beat 8 of last 8 quarters)',
+        'Validated with technical signals: bullish MACD crossover + volume confirmation',
+        'Risk-adjusted position sizing: 5% of portfolio, within max trade limit',
+      ],
+      confidenceBreakdown: {
+        fundamental: 95,
+        technical: 88,
+        sentiment: 91,
+        risk: 85,
+      },
+    },
   },
   {
     id: '2',
@@ -63,6 +90,33 @@ export const tradeLeads = [
     potentialReturn: '+5.2%',
     timeframe: '3-6 weeks',
     status: 'pending' as const,
+    reasoning: {
+      dataSources: [
+        { name: 'SEC 10-K Filing', type: 'fundamental' as const, detail: 'FY2025 Azure revenue grew 29%, Copilot adoption at 60% of enterprise' },
+        { name: 'Earnings Call Transcript', type: 'fundamental' as const, detail: 'CEO highlighted $10B+ AI annual run rate' },
+        { name: 'Social Sentiment (X/Reddit)', type: 'news' as const, detail: 'Developer sentiment score 78/100, trending positive on Copilot' },
+        { name: 'Technical Analysis', type: 'technical' as const, detail: 'Consolidating near ATH, Bollinger Band squeeze signals breakout' },
+      ],
+      signals: [
+        { label: 'Cloud Growth', impact: 'high' as const, description: 'Azure growing 29%, outpacing AWS (17%) and GCP (22%)' },
+        { label: 'AI Monetization', impact: 'high' as const, description: 'Copilot and AI services generating $10B+ annual run rate' },
+        { label: 'Margin Expansion', impact: 'medium' as const, description: 'Operating margin expanded 200bps to 44.6%' },
+        { label: 'Valuation', impact: 'low' as const, description: 'P/E of 33x is in line with 5-year average for growth profile' },
+      ],
+      steps: [
+        'Flagged via cloud/AI sector momentum screen',
+        'Analyzed Azure growth vs. peer cloud platforms',
+        'Reviewed Copilot adoption metrics from earnings call',
+        'Confirmed technical setup: consolidation pattern near all-time highs',
+        'Position sized at 4% of portfolio based on moderate volatility',
+      ],
+      confidenceBreakdown: {
+        fundamental: 90,
+        technical: 82,
+        sentiment: 85,
+        risk: 88,
+      },
+    },
   },
   {
     id: '3',
@@ -74,6 +128,33 @@ export const tradeLeads = [
     potentialReturn: '-3.8%',
     timeframe: '1-2 weeks',
     status: 'pending' as const,
+    reasoning: {
+      dataSources: [
+        { name: 'Delivery Report (IR)', type: 'fundamental' as const, detail: 'Q4 deliveries 480K vs 510K guidance — 5.9% miss' },
+        { name: 'China Auto Association', type: 'market' as const, detail: 'BYD outsold Tesla 3:1 in China market for Q4' },
+        { name: 'Options Flow Data', type: 'technical' as const, detail: 'Put/call ratio spiked to 1.8, bearish positioning increasing' },
+        { name: 'Analyst Reports', type: 'news' as const, detail: '6 downgrades and 4 price target cuts in past 14 days' },
+      ],
+      signals: [
+        { label: 'Delivery Miss', impact: 'high' as const, description: 'Q4 deliveries missed guidance by 5.9%, worst miss in 6 quarters' },
+        { label: 'Competition', impact: 'high' as const, description: 'Market share declining in China and Europe, BYD gaining rapidly' },
+        { label: 'Margin Pressure', impact: 'medium' as const, description: 'Gross margin at 17.6%, down from 25% two years ago' },
+        { label: 'Analyst Sentiment', impact: 'medium' as const, description: '6 downgrades in 14 days, consensus shifting bearish' },
+      ],
+      steps: [
+        'Delivery miss triggered automatic review of TSLA position',
+        'Compared delivery trend vs. guidance across last 4 quarters',
+        'Analyzed competitive landscape: BYD, Rivian, and legacy OEM EV launches',
+        'Confirmed bearish technical signals: below 20-day SMA, rising put/call ratio',
+        'Recommend full exit to redeploy capital into higher-conviction positions',
+      ],
+      confidenceBreakdown: {
+        fundamental: 78,
+        technical: 72,
+        sentiment: 68,
+        risk: 76,
+      },
+    },
   },
   {
     id: '4',
@@ -85,6 +166,33 @@ export const tradeLeads = [
     potentialReturn: '+1.2%',
     timeframe: '4-8 weeks',
     status: 'approved' as const,
+    reasoning: {
+      dataSources: [
+        { name: 'SEC 10-Q Filing', type: 'fundamental' as const, detail: 'Services revenue $24.2B (+14% YoY), iPhone flat at $46B' },
+        { name: 'Supply Chain Checks', type: 'market' as const, detail: 'iPhone 17 component orders stable, no upside signal yet' },
+        { name: 'Patent Filings (USPTO)', type: 'news' as const, detail: '12 new AI/ML-related patents filed in Q4, on-device LLM focus' },
+        { name: 'Technical Analysis', type: 'technical' as const, detail: 'Trading in range $178-$195, low volatility, no directional bias' },
+      ],
+      signals: [
+        { label: 'Services Growth', impact: 'medium' as const, description: 'Services revenue growing 14% YoY, strong margin contributor' },
+        { label: 'iPhone Cycle', impact: 'low' as const, description: 'Current cycle neutral, next catalyst is AI-enabled iPhone 17' },
+        { label: 'AI Catalyst Pending', impact: 'medium' as const, description: 'On-device AI features expected at WWDC — potential re-rating' },
+        { label: 'Stable Technicals', impact: 'low' as const, description: 'Range-bound trading with low volatility, no urgency to act' },
+      ],
+      steps: [
+        'Routine quarterly review of existing AAPL position',
+        'Assessed iPhone cycle: flat, not deteriorating',
+        'Reviewed AI patent activity as leading indicator of WWDC announcements',
+        'Technical analysis shows no exit signal — hold for AI catalyst',
+        'Maintain current 6% portfolio weight, reassess post-WWDC',
+      ],
+      confidenceBreakdown: {
+        fundamental: 84,
+        technical: 75,
+        sentiment: 80,
+        risk: 88,
+      },
+    },
   },
   {
     id: '5',
@@ -96,8 +204,43 @@ export const tradeLeads = [
     potentialReturn: '+6.1%',
     timeframe: '2-5 weeks',
     status: 'pending' as const,
+    reasoning: {
+      dataSources: [
+        { name: 'SEC 10-Q Filing', type: 'fundamental' as const, detail: 'Search revenue $50.8B (+12%), Cloud $9.4B (+28%)' },
+        { name: 'SimilarWeb Traffic Data', type: 'market' as const, detail: 'Gemini web traffic up 180% QoQ, user engagement rising' },
+        { name: 'Morgan Stanley Research', type: 'news' as const, detail: 'Upgraded to Overweight, $205 PT citing AI search monetization' },
+        { name: 'Technical Analysis', type: 'technical' as const, detail: 'Golden cross (50-day crossed above 200-day SMA), volume rising' },
+      ],
+      signals: [
+        { label: 'AI Search Revenue', impact: 'high' as const, description: 'Gemini integration driving 12% search revenue growth, beating estimates' },
+        { label: 'Cloud Acceleration', impact: 'high' as const, description: 'GCP growing 28%, gaining enterprise AI workload share' },
+        { label: 'Technical Breakout', impact: 'medium' as const, description: 'Golden cross confirmed with rising volume — strong bullish signal' },
+        { label: 'Regulatory Risk', impact: 'low' as const, description: 'DOJ antitrust case ongoing but market has priced in likely outcomes' },
+      ],
+      steps: [
+        'Identified via AI/search sector momentum screen',
+        'Analyzed Gemini user growth metrics vs. ChatGPT/Copilot adoption',
+        'Cross-referenced cloud growth with enterprise AI workload trends',
+        'Confirmed bullish technical setup: golden cross + volume expansion',
+        'Position sized at 4.5% of portfolio, within risk parameters',
+      ],
+      confidenceBreakdown: {
+        fundamental: 88,
+        technical: 84,
+        sentiment: 82,
+        risk: 80,
+      },
+    },
   },
 ];
+
+// Helper to mark a trade as approved (mutates in place)
+export function markTradeApproved(id: string) {
+  const trade = tradeLeads.find(t => t.id === id);
+  if (trade) {
+    (trade as { status: string }).status = 'approved';
+  }
+}
 
 // Recent activity
 export const recentActivity = [
